@@ -24,7 +24,7 @@ local Window = Rayfield:CreateWindow({
       GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
       Key = {"https://pastebin.com/raw/ytBahf7C"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
-})j
+})
 
 local ScriptsTab = Window:CreateTab("💀Scripts", nil) -- Title, Image
 local ScriptsSection = ScriptsTab:CreateSection("Scripts")
@@ -38,36 +38,36 @@ Rayfield:Notify({
       Ignore = {
          Name = "Okay!",
          Callback = function()
-         print("The user tapped Okay!")
-      end
+            print("The user tapped Okay!")
+         end
+      },
    },
-},
 })
 
 local Button = ScriptsTab:CreateButton({
    Name = "Keyboard",
    Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt",true))()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt",true))()
    end,
 })
 
 local Button = ScriptsTab:CreateButton({
    Name = "Fly",
    Callback = function()
-   loadstring(game:HttpGet("https://pastebin.com/raw/EeBjkX6K"))()
+      loadstring(game:HttpGet("https://pastebin.com/raw/EeBjkX6K"))()
    end,
 })
 
 local Button = ScriptsTab:CreateButton({
    Name = "Jailbreak Script",
    Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/piglex9/icetray3/main/latest.lua"))()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/piglex9/icetray3/main/latest.lua"))()
    end,
 })
 
-local Button = ScriptsTab:CreateButton({
+local DestroyButton = ScriptsTab:CreateButton({
    Name = "Destroy GUI",
    Callback = function()
-   Rayfield:Destroy()
+      Rayfield:Destroy()
    end,
 })
