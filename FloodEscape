@@ -1,0 +1,27 @@
+--RedEnderdude1245's Flood Escape Script
+--Gamepasses
+Game.Players.LocalPlayer.HasLifeProduct.Value = true
+Game.Players.LocalPlayer.HasMapProduct.Value = true
+Game.Players.LocalPlayer.PlayerGui.ExtremeMode.GamePass.Value = true
+
+--Click Teleport
+mouse = game.Players.LocalPlayer:GetMouse()
+tool = Instance.new("Tool")
+tool.RequiresHandle = false
+tool.Name = "Click Teleport"
+tool.Activated:connect(function()
+local pos = mouse.Hit+Vector3.new(0,2.5,0)
+pos = CFrame.new(pos.X,pos.Y,pos.Z)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+end)
+tool.Parent = game.Players.LocalPlayer.Backpack
+
+--Free Shopping (Beta)
+Game.Players.LocalPlayer.PlayerGui.ScreenGui.Shop.Item1.Price.Value = 0
+Game.Players.LocalPlayer.PlayerGui.ScreenGui.Shop.Item2.Price.Value = 0
+Game.Players.LocalPlayer.PlayerGui.ScreenGui.Shop.Item3.Price.Value = 0
+Game.Players.LocalPlayer.PlayerGui.ScreenGui.Shop.Item4.Price.Value = 0
+Game.Players.LocalPlayer.PlayerGui.ScreenGui.Shop.Item5.Price.Value = 0
+Game.Players.LocalPlayer.PlayerGui.ScreenGui.Shop.Item6.Price.Value = 0
+Game.Players.LocalPlayer.PlayerGui.ScreenGui.Shop.Item7.Price.Value = 0
+Game.Players.LocalPlayer.PlayerGui.ScreenGui.Shop.Item8.Price.Value = 0
