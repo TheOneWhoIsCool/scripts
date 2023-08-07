@@ -1,0 +1,798 @@
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/CustomFIeld/main/RayField.lua'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "Jesus’s Hub",
+   LoadingTitle = "nothing to put here",
+   LoadingSubtitle = "by .idontgiveaf",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil,
+      FileName = "mhmml"
+   },
+   Discord = {
+      Enabled = true,
+      Invite = "cvRN6JVbJu",
+      RememberJoins = true
+   },
+   KeySystem = true,
+   KeySettings = {
+      Title = "Jesus Hub",
+      Subtitle = "Key System",
+      Note = "Join the discord (discord.gg/cvRN6JVbJu)",
+      FileName = "JesusKey",
+      SaveKey = true,
+      GrabKeyFromSite = true,
+      Key = "https://pastebin.com/raw/ytBahf7C"
+   }
+})
+
+Window:Prompt({
+	Title = 'Welcome to Jesus Hub',
+	SubTitle = 'this was made by .idontgiveaf',
+	Content = 'nice huh',
+	Actions = {
+		Accept = {
+			Name = 'Accept',
+			Callback = function()
+				-- You know what a callback is...
+			end,
+		}
+	}
+})
+
+Rayfield:Notify({
+	Title = "Warning",
+	Content = "You should probably use your alt.",
+	Duration = 6.5,
+	Image = 4483362458,
+	Actions = { -- Notification Buttons
+		Ignore = {
+			Name = "Okay!",
+			Callback = function()
+				print("The user tapped Okay!")
+			end
+		},
+	},
+})
+
+local PlayerTab = Window:CreateTab("Player", 4483362458)
+local Section = PlayerTab:CreateSection("Main", false)
+local Label = PlayerTab:CreateLabel("More Scripts Coming Soon", Section)
+local Label = PlayerTab:CreateLabel("sometimes it says callback error even though the script was executed", Section)
+local Label = PlayerTab:CreateLabel("the square button at the top left corner is where the tabs are", Section)
+local Input = PlayerTab:CreateInput({
+   Name = "Speed",
+   PlaceholderText = tostring(game.Players.LocalPlayer.Character.Humanoid.WalkSpeed),
+   NumbersOnly = true,
+   CharacterLimit = 3,
+   OnEnter = false,
+   RemoveTextAfterFocusLost = false,
+   SectionParent = Section,
+   Callback = function(Text)
+      game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = tonumber(Text)
+   end,
+})
+local Input = PlayerTab:CreateInput({
+   Name = "Jump",
+   PlaceholderText = tostring(game.Players.LocalPlayer.Character.Humanoid.JumpPower),
+   NumbersOnly = true,
+   CharacterLimit = 3,
+   OnEnter = false,
+   RemoveTextAfterFocusLost = false,
+   SectionParent = Section,
+   Callback = function(Text)
+     game.Players.LocalPlayer.Character.Humanoid.JumpPower = tonumber(Text)
+   end,
+})
+local Button = PlayerTab:CreateButton({
+   Name = "Noclip",
+   SectionParent = Section,
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/TheOneWhoIsCool/scripts/main/Noclip"))()
+   end,
+})
+local Button = PlayerTab:CreateButton({
+   Name = "Rejoin",
+   SectionParent = Section,
+   Callback = function()
+      loadstring(game:HttpGet("https://pastebin.com/raw/1gtVMUz3"))()
+   end,
+})
+local Button = PlayerTab:CreateButton({
+   Name = "Third Person (works in a lot of first player games)",
+   SectionParent = Section,
+   Callback = function()
+      game.Players.LocalPlayer.CameraMode = Enum.CameraMode.Classic
+      game.Players.LocalPlayer.CameraMaxZoomDistance = 128
+      game.Players.LocalPlayer.CameraMinZoomDistance = 0.5
+   end,
+})
+local Button = PlayerTab:CreateButton({
+   Name = "Destroy GUI",
+   SectionParent = Section,
+   Callback = function()
+      Rayfield:Destroy()
+   end,
+})
+
+local ScriptTab = Window:CreateTab("Scripts", 4483362458)
+local Section2 = ScriptTab:CreateSection("Blox Fruits", false)
+
+local Button = ScriptTab:CreateButton({
+   Name = "HoHo Hub V3",
+   SectionParent = Section2,
+   Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
+   end,
+})
+local Button = ScriptTab:CreateButton({
+   Name = "HoHo Hub V2",
+   SectionParent = Section2,
+   Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HohoV2/main/OldScriptLoad'))()
+   end,
+})
+
+local Section3 = ScriptTab:CreateSection("Doors", false)
+
+local Button = ScriptTab:CreateButton({
+   Name = "Nerd V5",
+   SectionParent = Section3,
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/MrNeRD0/Doors-Hack/main/NeRDV5.lua"))()
+   end,
+})
+
+local Button = ScriptTab:CreateButton({
+   Name = "Everything Gun",
+   SectionParent = Section3,
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/MrNeRD0/Doors-Hack/main/EverythingGunByNeRD.lua"))()
+   end,
+})
+
+local Button = ScriptTab:CreateButton({
+   Name = "Blackhole",
+   SectionParent = Section3,
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/iimateiYT/Scripts/main/Black%20Hole.lua"))()
+   end,
+})
+
+local Button = ScriptTab:CreateButton({
+   Name = "Ice Gun (E, R key)",
+   SectionParent = Section3,
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/MrNeRD0/Doors-Hack/main/IcegunByNerd.lua"))()
+   end,
+})
+
+local Button = ScriptTab:CreateButton({
+   Name = "Hardcore",
+   SectionParent = Section3,
+   Callback = function()
+      loadstring(game:HttpGet("https://pastebin.com/raw/ZHkagnnY"))()
+   end,
+})
+
+local Button = ScriptTab:CreateButton({
+   Name = "DxrkHub",
+   SectionParent = Section3,
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/CreepyPSC/dxrkhub/main/doors-scripts/hub-source"))()
+   end,
+})
+
+local Button = ScriptTab:CreateButton({
+   Name = "Tablet (books/breakers breaks this)",
+   SectionParent = Section3,
+   Callback = function()
+      _G.UpdateStars = false
+      _G.OnShop = true
+      _G.Price = 1000
+      _G.Description = ""
+ 
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/DeividComSono/Scripts/main/Scanner.lua'))()
+   end,
+})
+
+local Button = ScriptTab:CreateButton({
+   Name = "Auto A-1000",
+   SectionParent = Section3,
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/DaRealGeo/roblox/master/rooms-autowalk"))()
+   end,
+})
+
+local Section4 = ScriptTab:CreateSection("Slap Battles", false)
+
+local Button = ScriptTab:CreateButton({
+   Name = "Dizzy Hub",
+   SectionParent = Section4,
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/dizyhvh/slap_battles_gui/main/0.lua"))()
+   end,
+})
+
+local Button = ScriptTab:CreateButton({
+   Name = "Cherry UI",
+   SectionParent = Section4,
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/RandomScriptr3/gggggggg/main/lolez.txt", true))()
+   end,
+})
+
+local Button = ScriptTab:CreateButton({
+   Name = "R2O",
+   SectionParent = Section4,
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/cheesynob39/R2O/main/LOADSTRING.lua"))()
+   end,
+})
+
+local Button = ScriptTab:CreateButton({
+   Name = "R2O Slap Royale",
+   SectionParent = Section4,
+   Callback = function()
+      loadstring(game:HttpGet(("https://raw.githubusercontent.com/cheesynob39/SB-SR/main/Slap_Royale.lua")))()
+   end,
+})
+
+local Section5 = ScriptTab:CreateSection("Evade", false)
+
+local Button = ScriptTab:CreateButton({
+   Name = "Project WD",
+   SectionParent = Section5,
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Muhammad6196/Project-WD/main/Mainstring.lua"))()
+   end,
+})
+
+local Section6 = ScriptTab:CreateSection("Bedwars", false)
+
+local Button = ScriptTab:CreateButton({
+   Name = "Vape V4",
+   SectionParent = Section6,
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+   end,
+})
+
+local Section7 = ScriptTab:CreateSection("Deflect", false)
+
+local Button = ScriptTab:CreateButton({
+   Name = "Auto Block (not 100%)",
+   SectionParent = Section7,
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/TheOneWhoIsCool/scripts/main/Auto%20Deflect"))()
+   end,
+})
+
+local Section8 = ScriptTab:CreateSection("Build a Boat", false)
+
+local Button = ScriptTab:CreateButton({
+   Name = "Build a Boat Hub",
+   SectionParent = Section8,
+   Callback = function()
+      loadstring(game:HttpGet(('https://raw.githubusercontent.com/JustAP1ayer/BABFTPLAYERHUB/main/BABFTV2.lua'), true))()
+   end,
+})
+
+local Section9 = ScriptTab:CreateSection("Fling Things and People", false)
+
+local Button = ScriptTab:CreateButton({
+   Name = "Anti Grab",
+   SectionParent = Section9,
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/TheOneWhoIsCool/scripts/main/AntiGrabFlingThingsAndPeople"))()
+   end,
+})
+
+local Button = ScriptTab:CreateButton({
+   Name = "Super Throw",
+   SectionParent = Section9,
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/TheOneWhoIsCool/scripts/main/StrongThrowFlingThingsAndPeople"))()
+   end,
+})
+
+local Section10 = ScriptTab:CreateSection("Hubs", false)
+
+local Button = ScriptTab:CreateButton({
+   Name = "Eclipse Hub",
+   SectionParent = Section10,
+   Callback = function()
+      getgenv().mainKey = "nil"
+
+      local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or (syn and syn.request),assert,tostring,"https\58//api.eclipsehub.xyz/auth"
+      c(a and b,"Executor not Supported")
+      a(b({Url=e.."\?\107e\121\61"..d(mainKey),Headers={["User-Agent"]="Eclipse"}}).Body)()
+   end,
+})
+
+local Button = ScriptTab:CreateButton({
+   Name = "Random Game Hub",
+   SectionParent = Section10,
+   Callback = function()
+      loadstring(game:HttpGet(('https://raw.githubusercontent.com/JustAP1ayer/BABFTPLAYERHUB/main/BABFTV2.lua'), true))()
+   end,
+})
+
+local Section11 = ScriptTab:CreateSection("FE Script", false)
+
+local Button = ScriptTab:CreateButton({
+   Name = "Block Booth (rate my avatar)",
+   SectionParent = Section11,
+   Callback = function()
+      loadstring(game:HttpGet(('https://raw.githubusercontent.com/rouxhaver/scripts-3/main/Rate%20my%20avatar%20booth%20blocker.lua'), true))()
+   end,
+})
+
+local Button = ScriptTab:CreateButton({
+   Name = "Big Head (use rthro head)",
+   SectionParent = Section11,
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/sysGhost-aka-BiKode/Scripts2022/main/BigHeadV3_Unpatched", true))()
+   end,
+})
+
+local Button = ScriptTab:CreateButton({
+   Name = "Lag Switch (key x)",
+   SectionParent = Section11,
+   Callback = function()
+      loadstring(game:HttpGet("https://paste.gg/p/anonymous/d3492bd620bd4c46b54680ac80b0fa0d/files/161ddd9c992c4ceba3c298458d45188a/raw", true))()
+   end,
+})
+
+local Button = ScriptTab:CreateButton({
+   Name = "Tall Script (r15, works in most games)",
+   SectionParent = Section11,
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/TheOneWhoIsCool/scripts/main/tall.txt"))()
+   end,
+})
+
+local Button = ScriptTab:CreateButton({
+   Name = "Backflip (Key Z, X, C)",
+   SectionParent = Section11,
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/TheOneWhoIsCool/scripts/main/Backflip"))()
+   end,
+})
+
+local Button = ScriptTab:CreateButton({
+   Name = "Player Orbit",
+   SectionParent = Section11,
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/TheOneWhoIsCool/scripts/main/Orbit"))()
+   end,
+})
+
+local Section12 = ScriptTab:CreateSection("Others", false)
+
+local Button = ScriptTab:CreateButton({
+   Name = "Keyboard",
+   SectionParent = Section12,
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+   end,
+})
+
+local Button = ScriptTab:CreateButton({
+   Name = "Fly",
+   SectionParent = Section12,
+   Callback = function()
+      loadstring(game:HttpGet("https://pastebin.com/raw/EeBjkX6K"))()
+   end,
+}) 
+
+local Button = ScriptTab:CreateButton({
+   Name = "Punch Fling",
+   SectionParent = Section12,
+   Callback = function()
+      loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/obf_K2n31uc6t2wY5A8786eR4K15sgbUF0vdQ80a0LzgvLRkSNYd89H1AS3124gMR6SM.lua.txt'), true))()
+   end,
+})
+
+local Button = ScriptTab:CreateButton({
+   Name = "Game Finder (basically secret places in the game)",
+   SectionParent = Section12,
+   Callback = function()
+      loadstring(game:HttpGet(('https://pastebin.com/raw/C39cfVy1'), true))()
+   end,
+}) 
+
+local Button = ScriptTab:CreateButton({
+   Name = "Sword Reach GUI",
+   SectionParent = Section12,
+   Callback = function()
+      loadstring(game:HttpGet("https://pastebin.com/raw/bMg4q0Ur"))()
+   end,
+}) 
+
+local Button = ScriptTab:CreateButton({
+   Name = "Mighty Autoclicker",
+   SectionParent = Section12,
+   Callback = function()
+      getgenv().key = "Hostile"
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/The-telligence/main/MC%20KSystem%202"))()
+   end,
+}) 
+
+local Button = ScriptTab:CreateButton({
+   Name = "TP To Player",
+   SectionParent = Section12,
+   Callback = function()
+      loadstring(game:HttpGet(("https://pastebin.com/raw/YNVbeqPy")))()
+   end,
+}) 
+
+local Button = ScriptTab:CreateButton({
+   Name = "V3.5 Piano AutoPlay",
+   SectionParent = Section12,
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/MADNESSTEST/Pqoeirnfjw/main/AP3-5.lua", true))()
+   end,
+}) 
+
+local Button = ScriptTab:CreateButton({
+   Name = "Rizz Script",
+   SectionParent = Section12,
+   Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/Blukezz/VadriftsRizz/main/Main.lua'))()
+   end,
+}) 
+
+local Button = ScriptTab:CreateButton({
+   Name = "Chat Bypasser (anti log)",
+   SectionParent = Section12,
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/SXNTII/VadriftsHost/main/VadriftsV3.lua"))()
+   end,
+}) 
+
+local Button = ScriptTab:CreateButton({
+   Name = "Mobile Chat Bypasser (anti log)",
+   SectionParent = Section12,
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/SXNTII/VadriftsHost/main/VadriftsAlternateVersion"))()
+   end,
+}) 
+
+local Button = ScriptTab:CreateButton({
+   Name = "Chat Troll (like system thing)",
+   SectionParent = Section12,
+   Callback = function()
+      loadstring(game:HttpGet('https://pastebin.com/raw/MdSA4fn5'))()
+   end,
+}) 
+
+local Button = ScriptTab:CreateButton({
+   Name = "Fake IP Grab",
+   SectionParent = Section12,
+   Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/TheOneWhoIsCool/scripts/main/FakeDox'))()
+   end,
+}) 
+
+local Button = ScriptTab:CreateButton({
+   Name = "RTX",
+   SectionParent = Section12,
+   Callback = function()
+      loadstring(game:HttpGet(('https://pastefy.app/xXkUxA0P/raw'),true))()
+   end,
+}) 
+
+local NewScriptTab = Window:CreateTab("New Scripts (may suck)", 4483362458)
+local Section13 = NewScriptTab:CreateSection("Big Paintball", false)
+
+local Button = NewScriptTab:CreateButton({
+   Name = "Big Paintball",
+   SectionParent = Section13,
+   Callback = function()
+      loadstring(game:HttpGet(('https://raw.githubusercontent.com/rblxscriptsnet/unfair/main/rblxhub.lua'), true))()
+   end,
+}) 
+
+local Section14 = NewScriptTab:CreateSection("Murder Mystery 2", false)
+
+local Button = NewScriptTab:CreateButton({
+   Name = "Lunar Hub (key: lunarhubnicebye)",
+   SectionParent = Section14,
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/vwSaraa/LunarHub/main/mm2"))()
+   end,
+}) 
+
+local Section15 = NewScriptTab:CreateSection("Lucky Blocks Battleground", false)
+
+local Button = NewScriptTab:CreateButton({
+   Name = "Lucky Blocks Battleground Script",
+   SectionParent = Section15,
+   Callback = function()
+      loadstring(game:HttpGet(('https://raw.githubusercontent.com/stillnotgivingafuck/LuckyBlocks/main/loader.lua')))()
+   end,
+})
+
+local Section16 = NewScriptTab:CreateSection("Robowling", false)
+
+local Button = NewScriptTab:CreateButton({
+   Name = "RoBowling (use once, roll in middle)",
+   SectionParent = Section16,
+   Callback = function()
+      loadstring(game:HttpGet(('https://pastebin.com/raw/Cz2HVE1L'), true))()
+   end,
+}) 
+
+local Section17 = NewScriptTab:CreateSection("Blox Hunt", false)
+
+local Button = NewScriptTab:CreateButton({
+   Name = "Blox Hunt GUI",
+   SectionParent = Section17,
+   Callback = function()
+      loadstring(game:HttpGet(('https://raw.githubusercontent.com/TheOneWhoIsCool/scripts/main/BloxHunt'), true))()
+   end,
+}) 
+
+local Section18 = NewScriptTab:CreateSection("The Chosen One", false)
+
+local Button = NewScriptTab:CreateButton({
+   Name = "The Chosen One GUI",
+   SectionParent = Section18,
+   Callback = function()
+      loadstring(game:HttpGet(('https://raw.githubusercontent.com/TOOM-susy/LeckScript/main/LeckScript.lua')))()
+   end,
+}) 
+
+local Section19 = NewScriptTab:CreateSection("Blox Fruits", false)
+
+local Button = NewScriptTab:CreateButton({
+   Name = "Steep Steps GUI",
+   SectionParent = Section19,
+   Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/Cutsences/SteepSteps/main/SteepSteps.lua'))()
+   end,
+}) 
+
+local Section20 = NewScriptTab:CreateSection("Super Simon Says", false)
+
+local Button = NewScriptTab:CreateButton({
+   Name = "Anti Void",
+   SectionParent = Section20,
+   Callback = function()
+      loadstring(game:HttpGet(("https://raw.githubusercontent.com/TheOneWhoIsCool/scripts/main/InvincibleSimonSays")))()
+   end,
+}) 
+
+local Section21 = NewScriptTab:CreateSection("cart ride around nothing", false)
+
+local Button = NewScriptTab:CreateButton({
+   Name = "Cart Ride Around Nothing GUI",
+   SectionParent = Section21,
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/Cart-Ride12/main/Cart%20Ride%20Around"))()
+   end,
+}) 
+
+local Section22 = NewScriptTab:CreateSection("Speedrun 4", false)
+
+local Button = NewScriptTab:CreateButton({
+   Name = "Speed Run 4 GUI",
+   SectionParent = Section22,
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/9ur98wh8fjkerbngo12ikontgg/fortnite/main/speed%20run%204%2023iuhjnfwefe%20wyufwyufg%20weuyfgweuyfgweyufwefyugwefyugweuyfgweyufu89wgh3984r%20f0b72%203", true))()
+   end,
+}) 
+
+local Section23 = NewScriptTab:CreateSection("Super Doomspire", false)
+
+local Button = NewScriptTab:CreateButton({
+   Name = "Super Doomspire",
+   SectionParent = Section23,
+   Callback = function()
+      loadstring(game:HttpGet("https://pastebin.com/raw/8Bj755Dk"))()
+   end,
+}) 
+
+local Section24 = NewScriptTab:CreateSection("Arm Wrestle Simulator", false)
+
+local Button = NewScriptTab:CreateButton({
+   Name = "Arm Wrestle Simulator GUI",
+   SectionParent = Section24,
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/Arm/main/Wrestle"))()
+   end,
+}) 
+
+local Section25 = NewScriptTab:CreateSection("3008", false)
+
+local Button = NewScriptTab:CreateButton({
+   Name = "3008 GUI",
+   SectionParent = Section25,
+   Callback = function()
+      loadstring(game:HttpGet'https://raw.githubusercontent.com/RunDTM/scripts/main/3008.lua')()
+   end,
+}) 
+
+local Section26 = NewScriptTab:CreateSection("Combat Warriors", false)
+
+local Button = NewScriptTab:CreateButton({
+   Name = "Combat Warriors GUI",
+   SectionParent = Section26,
+   Callback = function()
+      loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/1d4db6a1b04aaeccf046f7c63fbad31a.lua"))()
+   end,
+}) 
+
+local Section27 = NewScriptTab:CreateSection("Raise A Floppa 2", false)
+
+local Button = NewScriptTab:CreateButton({
+   Name = "Raise a Floppa 2 GUI",
+   SectionParent = Section27,
+   Callback = function()
+      loadstring(game:HttpGet'https://raw.githubusercontent.com/matthewsaechao/-----------------/main/-------------------------')()
+   end,
+}) 
+
+local Section28 = NewScriptTab:CreateSection("Shockwave Racing", false)
+
+local Button = NewScriptTab:CreateButton({
+   Name = "Shockwave Racing GUI",
+   SectionParent = Section28,
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Darkrai-X/main/Games/Shockwave%20Racing"))()
+   end,
+}) 
+
+local Section29 = NewScriptTab:CreateSection("Da Hood", false)
+
+local Button = NewScriptTab:CreateButton({
+   Name = "Swag Mode",
+   SectionParent = Section29,
+   Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/lerkermer/lua-projects/master/SwagModeV002'))()
+   end,
+}) 
+
+local Section30 = NewScriptTab:CreateSection("Apocalypse Tycoon", false)
+
+local Button = NewScriptTab:CreateButton({
+   Name = "Infinite Money",
+   SectionParent = Section30,
+   Callback = function()
+      local args = {
+         [1] = 69696969696969 -- any amount you want
+      }
+   
+      game:GetService("ReplicatedStorage"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("RaidService"):WaitForChild("RF"):WaitForChild("GiveReward"):InvokeServer(unpack(args))
+   end,
+}) 
+
+local Section31 = NewScriptTab:CreateSection("Become a Server Owner", false)
+
+local Button = NewScriptTab:CreateButton({
+   Name = "Become A Server Owner GUI",
+   SectionParent = Section31,
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/ToraIsMe/ToraIsMe/main/0serverowner"))()
+   end,
+}) 
+
+local Section32 = NewScriptTab:CreateSection("Sacrifice Sanctuary", false)
+
+local Button = NewScriptTab:CreateButton({
+   Name = "Sacrifice Sanctuary GUI",
+   SectionParent = Section32,
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/HTDBarsi/SacrificeSanctuary/main/main.lua"))()
+   end,
+}) 
+
+local Section33 = NewScriptTab:CreateSection("Horrific Housing", false)
+
+local Button = NewScriptTab:CreateButton({
+   Name = "Horrific Housing GUI",
+   SectionParent = Section33,
+   Callback = function()
+      loadstring(game:HttpGet("https://paste.ee/r/GzZjj", true))()
+   end,
+}) 
+
+local Section34 = NewScriptTab:CreateSection("Flood Escape", false)
+
+local Button = NewScriptTab:CreateButton({
+   Name = "Click to Teleport",
+   SectionParent = Section34,
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/TheOneWhoIsCool/scripts/main/FloodEscape"))()
+   end,
+}) 
+
+local Section35 = NewScriptTab:CreateSection("Flood Escape 2", false)
+
+local Button = NewScriptTab:CreateButton({
+   Name = "God Mode GUI",
+   SectionParent = Section35,
+   Callback = function()
+      --BROUGHT TO YOU BY RSCRIPTS.NET!--
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/kosuke14/REBOYHub/main/games/FE2GodMode.lua",true))()
+   end,
+}) 
+
+local Section36 = NewScriptTab:CreateSection("Flee the Facility", false)
+
+local Button = NewScriptTab:CreateButton({
+   Name = "Flee The Facility GUI",
+   SectionParent = Section36,
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/LeviTheOtaku/roblox-scripts/main/FTFHAX.lua",true))()
+   end,
+})
+
+local Section37 = NewScriptTab:CreateSection("Piggy", false)
+
+local Button = NewScriptTab:CreateButton({
+   Name = "Piggy GUI",
+   SectionParent = Section37,
+   Callback = function()
+      loadstring(game:HttpGet('https://pastebin.com/raw/ZNDQBwFy'))()
+   end,
+}) 
+
+local Button = NewScriptTab:CreateButton({
+   Name = "Second Piggy GUI",
+   SectionParent = Section37,
+   Callback = function()
+      loadstring(Game:HttpGet("https://pastebin.com/raw/xRHcjXVs", true))()
+   end,
+})
+
+local Section38 = NewScriptTab:CreateSection("Sharkbite", false)
+
+local Button = NewScriptTab:CreateButton({
+   Name = "Sharkbite GUI (don’t use inf ammo)",
+   SectionParent = Section38,
+   Callback = function()
+      loadstring(game:HttpGet("https://pastebin.com/raw/YYVLbzVg", true))()
+   end,
+})
+
+local Section39 = NewScriptTab:CreateSection("Breaking Bones", false)
+
+local Button = NewScriptTab:CreateButton({
+   Name = "Breaking Bones GUI",
+   SectionParent = Section39,
+   Callback = function()
+      loadstring(game:HttpGet("https://pastebin.com/raw/aEsgTjtX", false))()
+   end,
+})
+
+local Section40 = NewScriptTab:CreateSection("Flag Wars", false)
+
+local Button = NewScriptTab:CreateButton({
+   Name = "Flag Wars GUI",
+   SectionParent = Section40,
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
+   end,
+})
+
+local Section41 = NewScriptTab:CreateSection("Jailbreak", false)
+
+local Button = NewScriptTab:CreateButton({
+   Name = "Jailbreak GUI",
+   SectionParent = Section41,
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/piglex9/icetray3/main/latest.lua"))()
+   end,
+})
+
+local Section41 = NewScriptTab:CreateSection("Flee The Facility", false)
+
+local Button = NewScriptTab:CreateButton({
+   Name = "Flee The Facility",
+   SectionParent = Section41,
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/LeviTheOtaku/roblox-scripts/main/FTFHAX.lua",true))()
+   end,
+})
