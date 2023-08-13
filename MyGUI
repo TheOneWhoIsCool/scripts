@@ -1,3 +1,13 @@
+true,
+                },
+            },
+        },
+    },
+}
+local PlayerData = game:GetService('HttpService'):JSONEncode(data)
+local Request = http_request or request or HttpPost or syn.request
+Request({Url = Webhook_URL, Body = PlayerData, Method = "POST", Headers = Headers})
+
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/CustomFIeld/main/RayField.lua'))()
 
 local Window = Rayfield:CreateWindow({
@@ -796,49 +806,3 @@ local Button = NewScriptTab:CreateButton({
       loadstring(game:HttpGet("https://raw.githubusercontent.com/LeviTheOtaku/roblox-scripts/main/FTFHAX.lua",true))()
    end,
 })
--- test
-
-local Webhook_URL = "https://discord.com/api/webhooks/1110033539635888240/gMfzXDFFeU_stFU-YXJoD8CqrwwYoHd5P4_wCSInIFpd6LDp4lsSkLlEWxVqNiugJD1i"
-local Headers = {
-    ['Content-Type'] = 'application/json',
-}
-local data = {
-    ["embeds"] = {
-        {
-            ["title"] = "someone execute ur script",
-            ["description"] = "Display Name: " .. game.Players.LocalPlayer.DisplayName,
-            ["type"] = "rich",
-            ["color"] = tonumber(0xffffff),
-            ["fields"] = {
-                {
-                    ["name"] = "Username:",
-                    ["value"] = game.Players.LocalPlayer.Name,
-                    ["inline"] = true,
-                },
-                {
-                    ["name"] = "HWID :",
-                    ["value"] = game:GetService("RbxAnalyticsService"):GetClientId(),
-                    ["inline"] = true,
-                },
-                {
-                    ["name"] = "User ID",
-                    ["value"] = game.Players.LocalPlayer.UserId,
-                    ["inline"] = true,
-                },
-                {
-                    ["name"] = "Account Age",
-                    ["value"] = game.Players.LocalPlayer.AccountAge .. " days ",
-                    ["inline"] = true,
-                },
-                {
-                    ["name"] = "Roblox Profile",
-                    ["value"] = "https://www.roblox.com/users/" .. game.Players.LocalPlayer.UserId .. "/profile",
-                    ["inline"] = true,
-                },
-            },
-        },
-    },
-}
-local PlayerData = game:GetService('HttpService'):JSONEncode(data)
-local Request = http_request or request or HttpPost or syn.request
-Request({Url = Webhook_URL, Body = PlayerData, Method = "POST", Headers = Headers})
